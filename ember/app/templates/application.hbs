@@ -1,0 +1,9 @@
+<!-- The base page, not to be confused with a master or layout page -->
+
+<h2 id="title">Welcome to Projolecto</h2>
+
+{{outlet 'modal' }}
+
+<div class="{{if showingModal 'background' ''}}">
+  {{outlet}}
+</div>

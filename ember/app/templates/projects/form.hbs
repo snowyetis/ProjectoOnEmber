@@ -1,0 +1,18 @@
+<form {{ action "edit" on="submit" }} role="form" class="projects" >
+  <fieldset>
+    <legend></legend>
+    <div class="form-group">
+      <label for="project_name">Project Name</label>
+      {{ input value=projects.project_name class="form-control" }}
+    </div>
+    <div class="form-group">
+      <label for="status">Status</label>
+      {{ input value=projects.status class="form-control" }}
+    </div>
+    {{#each model.project_details as |pd|}}
+      {{ project-detail-form  model=pd fieldValue=pd }}
+    {{/each}}
+    <button type="submit">Save</button>
+    <button type="button" {{action "addProfileDetailFields" }}>Add a Detail</button>
+  </fieldset>
+</form>

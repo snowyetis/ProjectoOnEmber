@@ -1,0 +1,12 @@
+<h2>{{project_name}}</h2>
+<h3>{{status}}</h3>
+<table>
+  {{#each model.project_details as |pd|}}
+    <tr>
+      <td>{{pd.feature_name}}</td>
+      <td>{{pd.hours_bill}}</td>
+      <td>{{pd.available_hours}}</td>
+      <td>{{pd.amount}}</td>
+    </tr>
+  {{/each}}
+</table>

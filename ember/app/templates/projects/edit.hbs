@@ -1,0 +1,11 @@
+<h2>Edit your Project</h2>
+
+<div class="row">
+  <div class="col-md-6">
+    <!-- {{form model=model buttonLabel=buttonLabel action='saveProject' }} -->
+    <form {{ action "update" on="submit" }} role="form" class="projects" >
+      {{project-form model=model action='saveProject'}}
+    <button type="submit">Update</button>
+  </form>
+  </div>
+</div>

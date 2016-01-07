@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  {{#link-to 'projects.new' class="projects" }}Create a new project{{/link-to}}
+  <ul class="projects">
+    {{#each model.projects as |p|}}
+      <li class="projects">
+        <p>{{#link-to 'projects.show' p class="projects"}}{{p.project_name}}{{/link-to}}</p>
+        <p>{{p.status}}</p>
+        <p>{{#link-to 'projects.edit' p.id class="projects"}}Modify the Project{{/link-to}}</p>
+      </li>
+    {{/each}}
+  </ul>
+</div>
